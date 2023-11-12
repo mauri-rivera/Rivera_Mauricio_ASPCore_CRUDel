@@ -1,0 +1,32 @@
+﻿@model Dish
+
+<h1 class="titulo">@Model.Name</h1>
+<div class="menu">
+    <a asp-controller="Home" asp-action="Index">Home</a>
+    <span class=linea>|</span>
+    <a asp-controller="Home" asp-action="AddDish">Add a Dish</a>
+</div>
+<div class="muestraColumna">
+    <div class="listaMenu">
+        <span class="subtitulo">@Model.Name by @Model.Chef</span>
+        <div class="columnaDos">
+            <div class="lista">
+                <label class="nombreTexto">@Model.Description</label>
+            </div>
+            <div class="lista">
+                <label class="nombreTexto">Calories: @Model.Calories</label>
+            </div>
+            <div class="lista">
+                <label class="nombreTexto">Tastiness: @Model.Tastiness</label>
+            </div>
+        </div>
+    </div>
+    <div class="listaBotones">
+        <form asp-controller="Home" asp-action="DestroyDish" asp-route-DishId="@Model.DishId" method="GET">
+            <button class="delete">Delete</button>
+        </form>
+        <form asp-controller="Home" asp-action="EditDish" asp-route-DishId="@Model.DishId" method="GET">
+            <button class="edit">Edit</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+@model Dish
+
+<h1 class="titulo">Add a new Dish!</h1>
+<div class="menu">
+    <a asp-controller="Home" asp-action="Index">Home</a>
+    <span class=linea>|</span>
+    <span>Add a Dish</span>
+</div>
+<form asp-controller="Home" asp-action="AddDish" method="POST">
+    <div class="listaColumna">
+        <div class="columnaVarias">
+            <div class="cuadroTexto">
+                <label class="nombreTexto" asp-for="Chef">Chef's Name</label>
+                <input class="campoTexto" asp-for="Chef">
+                <span asp-validation-for="Chef"></span>
+            </div>
+            <div class="cuadroTexto">
+                <label class="nombreTexto" asp-for="Name">Name of Dish</label>
+                <input class="campoTexto" asp-for="Name">
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="cuadroTexto">
+                <label class="nombreTexto" asp-for="Calories"># of Calories</label>
+                <input class="campoTexto" asp-for="Calories" pattern="^[0-9]+"
+                       onkeypress="return event.charCode >= 48" min="1" oninput="this.value = Math.max(this.value, 1)"
+                       placeholder="# of Calories">
+                <span asp-validation-for="Calories"></span>
+            </div>
+        </div>
+        <div class="columnaVarias">
+            <div class="cuadroTexto">
+                <label class="nombreTexto" asp-for="Tastiness"></label>
+                @{
+                    <select class="campoTextoDos" asp-for="Tastiness">
+                        @for (int i = 1; i < 6; i++)
+                        {
+                            <option>@i</option>
+                        }
+                    </select>
+                }
+            </div>
+        </div>
+        <div class="columnaVarias">
+            <div class="cuadroTexto">
+                <label class="nombreTexto" asp-for="Description"></label>
+                <textarea class="campoTextoTres" asp-for="Description"></textarea>
+                <span asp-validation-for="Description"></span>
+            </div>
+            <div class="cuadroBoton">
+                <button>Add Dish</button>
+            </div>
+        </div>
+    </div>
+</form>

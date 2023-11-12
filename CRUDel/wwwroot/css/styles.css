@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    margin: 7.5vh 15vw 0 15vw;
+    width: 70vw;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.linea {
+    margin: 0 1vw;
+}
+
+.listaMenu {
+    margin-top: 4vh;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5clvh;
+}
+
+.columnaDos {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    margin-top: 6vh;
+}
+
+.columnaVarias {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.subtitulo {
+    font-size: x-large;
+    font-weight: bold;
+    padding: 0 1.75vw 1.25vh 1.75vw;
+    border: 6.5px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 4vh;
+    width: 33%;
+}
+
+.plato, .nombreTexto {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.lista, .cuadroTexto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25vh;
+}
+
+.listaColumna {
+    display: flex;
+    flex-direction: row;
+    margin-top: 7vh;
+    justify-content: space-between;
+    gap: 3vw;
+}
+
+.campoTexto {
+    padding-left: 2vw;
+    width: 20vw;
+    height: 6.25vh;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.cuadroTexto span {
+    height: 1vh;
+    color: red;
+}
+
+.campoTextoDos {
+    padding-left: 2vw;
+    height: 6.25vh;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.campoTextoTres {
+    padding-top: 1.8vh;
+    padding-left: 2vw;
+    max-width: 25vw;
+    min-width: 25vw;
+    max-height: 25vh;
+    min-height: 25vh;
+    font-size: larger;
+    font-weight: bold;
+    margin: 1vh 0;
+}
+
+.cuadroBoton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+    .cuadroBoton button {
+        padding: 1.5vh 2vw;
+        font-size: large;
+        font-weight: bolder;
+        background-color: white;
+        box-shadow: 4px 4px black;
+        cursor: pointer;
+    }
+
+.listaBotones {
+    display: flex;
+    justify-content: space-around;
+}
+
+.edit, .delete {
+    padding: 1.5vh 2vw;
+    font-size: large;
+    font-weight: bolder;
+    box-shadow: 4px 4px black;
+    cursor: pointer;
+}
+
+.edit {
+    background-color: royalblue;
+}
+
+.delete {
+    background-color: salmon;
+}
+
+.muestraColumna {
+    display: flex;
+    flex-direction: column;
+    gap: 12.5vh;
+}
